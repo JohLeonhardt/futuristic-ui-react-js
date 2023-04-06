@@ -2,7 +2,7 @@
 // import { StyledDiv } from './styles';
 import './style.css';
 
-const Page1 = () => {
+const Page3 = () => {
     useEffect(
         () => {
             document.title = 'HWT - Page 1';
@@ -10,7 +10,7 @@ const Page1 = () => {
     );
 
 
-    function playSound1() {
+    function playSound() {
         document.querySelector('input[type="checkbox"]').checked = !document.querySelector('input[type="checkbox"]').checked;
         let sound1 = "https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-interface-zoom-890.mp3";
         let sound2 = "https://assets.mixkit.co/sfx/preview/mixkit-game-quick-warning-notification-268.mp3";
@@ -19,7 +19,7 @@ const Page1 = () => {
         let sound5 = "https://assets.mixkit.co/sfx/preview/mixkit-fast-sci-fi-bleep-903.mp3";
         let sound6 = "https://assets.mixkit.co/sfx/preview/mixkit-high-tech-bleep-2521.mp3";
         let sound7 = "https://assets.mixkit.co/sfx/preview/mixkit-high-tech-bleep-confirmation-2520.mp3";
-        let audio = new Audio(document.querySelector('input[type="checkbox"]').checked ? sound4 : sound2);
+        let audio = new Audio(document.querySelector('input[type="checkbox"]').checked ? sound5 : sound6);
         if (!audio.ended) {
             audio.pause();
             audio.currentTime = 0;
@@ -29,11 +29,12 @@ const Page1 = () => {
     }
 
 
+
     return (
 
         <div>
             <input type="checkbox" />
-            <svg onClick={playSound1} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100vw" height="100vh" viewBox="-10 10 1100 600" className="unterground">
+            <svg onClick={playSound} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="50vw" height="50vh" viewBox="-10 10 1100 600" className="unterground">
                 {/* viewBox="0 0 1036 460"> */}
                 <g id="fireCircles">
                     <g id="innerCircle" style={{ isolation: "isolate" }} transform="translate(.000001 0.000001)">
@@ -114,7 +115,7 @@ const Page1 = () => {
 }
 
 
-export default Page1;
+export default Page3;
 
 
 
